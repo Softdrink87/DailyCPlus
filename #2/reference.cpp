@@ -1,8 +1,12 @@
 #include <iostream>
 
-int change_val(int& p) {
-    p = 3;
-
-    return 0;
+int function() {
+    int a = 5;
+    return a;
 }
 
+int main() {
+    const int& c = function();
+    std::cout << "C : " << c << std::endl;
+    return 0;
+}
